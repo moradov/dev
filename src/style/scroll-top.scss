@@ -1,0 +1,22 @@
+@import "_variables.scss";
+.scroll-top {
+  position: fixed;
+  right: 50px;
+  bottom: 66px;
+  padding: 7px 17px;
+  background-color: $mainColor;
+  border: 1px solid $mainColor;
+  cursor: pointer;
+  @media (max-width: $phone) {
+    right: 27px;
+    bottom: 60px;
+  }
+  .fas {
+    transform: rotateZ(-90deg);
+    font-size: 26px;
+    color: #fff;
+    @media (max-width: $phone) {
+      font-size: 19px;
+    }
+  }
+}

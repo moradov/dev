@@ -1,0 +1,63 @@
+@import "./_variables.scss";
+nav {
+  background-color: #fff;
+  padding: 23px 0px;
+  box-shadow: 7px 2px 16px -10px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  @media (max-width: $phone) {
+    padding: 13px 0px;
+  }
+  .nav-content {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+      padding: 0 18px;
+    }
+
+    .left-nav,
+    .right-nav {
+      list-style: none;
+    }
+    .left-nav {
+      @media (max-width: $tablet) {
+        margin-bottom: 9px;
+      }
+      li a {
+        color: #330654;
+        font-weight: 700;
+        font-size: 25px;
+        text-decoration: none;
+      }
+    }
+    .right-nav {
+      display: flex;
+      .nav-li {
+        a {
+          margin-right: 48px;
+          text-decoration: none;
+          color: #626152;
+          font-size: 19px;
+          @media (max-width: $tablet) {
+            margin-right: 35px;
+          }
+          @media (max-width: $phone) {
+            margin-right: 22px;
+            font-size: 16px;
+          }
+        }
+        .active {
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}

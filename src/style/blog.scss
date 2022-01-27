@@ -1,0 +1,58 @@
+@import "_variables.scss";
+@import "_clasess.scss";
+
+.content-wrapper {
+  margin: 130px auto;
+  @media (max-width: $phone) {
+    margin: 60px auto;
+  }
+  width: 90%;
+  .blogs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 30px;
+    margin-bottom: 201px;
+    .blog-item {
+      box-shadow: 0px 0px 30px -18px;
+      .blog-content {
+        width: 90%;
+        margin: 34px auto;
+        .blog-image {
+          width: 100%;
+          img {
+            width: 100%;
+          }
+        }
+        .blog-duration {
+          margin: 12px 0px;
+          .fas {
+            font-size: 21px;
+            color: $mainColor;
+          }
+          span {
+            font-size: 15px;
+          }
+        }
+        .blog-title {
+          font-size: 23px;
+          color: #330654;
+        }
+        .blog-desc {
+          margin: 10px auto;
+          font-size: 15px;
+          color: #606060;
+        }
+        .blog-btn {
+          @extend %mainBtn;
+          text-align: center;
+          padding: 4px 22px;
+          border-radius: 4px;
+          font-size: 14px;
+          cursor: pointer;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

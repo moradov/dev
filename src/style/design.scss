@@ -1,0 +1,82 @@
+@import "_variables.scss";
+@import "_clasess.scss";
+
+.content-wrapper {
+  margin: 150px auto;
+  .projects-list {
+    margin: auto;
+    @media (max-width: 570px) {
+      margin-bottom: 251px;
+    }
+    .project {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 200px;
+      @media (max-width: 800px) {
+        flex-direction: column;
+        margin-bottom: 90px;
+      }
+      .left-content {
+        .project-name {
+          @extend %headColor;
+        }
+        .project-date {
+          margin: 6px 0px;
+          font-weight: bold;
+          font-size: 17px;
+        }
+        .project-desc {
+          @extend %mainP;
+          margin-bottom: 9px;
+        }
+        width: 50%;
+        @media (max-width: 800px) {
+          width: 100%;
+          order: 2;
+        }
+        .used-tech {
+          display: flex;
+          @media (max-width: $phone) {
+            flex-direction: column;
+          }
+
+          p {
+            color: #383838;
+            @media (max-width: $phone) {
+              min-width: 151px;
+              font-size: 14px;
+              font-weight: bold;
+            }
+          }
+          span {
+            background: #bc36d9;
+            color: #fff;
+            padding: 1px 3px;
+            font-size: 12px;
+            margin-right: 6px;
+          }
+        }
+      }
+      .right-content {
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $mainColor;
+        border-radius: 6px;
+        height: 300px;
+        cursor: pointer;
+        @media (max-width: 800px) {
+          width: 100%;
+          order: 1;
+          margin-bottom: 25px;
+        }
+        img {
+          width: 91%;
+          height: 87%;
+        }
+      }
+    }
+  }
+}

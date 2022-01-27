@@ -1,0 +1,17 @@
+@import "_variables.scss";
+@import "_clasess.scss";
+
+.pageHeader {
+  padding: 40px 0;
+  background-color: $mainColor;
+  margin-top: 84px;
+  @media (max-width: $tablet) {
+    margin-top: 98px;
+  }
+  h2 {
+    width: 90%;
+    margin: auto;
+    color: #fff;
+    font-size: 22px;
+  }
+}

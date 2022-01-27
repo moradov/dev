@@ -1,0 +1,132 @@
+@import "_variables.scss";
+@import "_clasess.scss";
+
+/// HEADER STYLE
+
+header {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  background-image: url("https://i.ibb.co/Gf6HKmJ/445126.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .header-content {
+    text-align: center;
+    .avatar-img img {
+      width: 90px;
+      height: 90px;
+    }
+    h3 {
+      color: white;
+      margin-top: 12px;
+      font-size: 25px;
+      @media (max-width: $phone) {
+        font-size: 18px;
+      }
+    }
+    h2 {
+      max-width: 350px;
+      margin: auto;
+      font-size: 26px;
+      color: $mainColor;
+      margin: 10px 0px;
+      @media (max-width: $phone) {
+        font-size: 22px;
+      }
+    }
+    p {
+      color: #fff;
+      max-width: 350px;
+      margin: auto;
+      @extend %mainP;
+    }
+    button {
+      @extend %mainBtn;
+      margin-top: 19px;
+    }
+  }
+}
+
+///PROJECTS CATEGORIES STYLE
+
+.projects-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(276px, 1fr));
+  grid-gap: 33px;
+  width: 90%;
+  margin: 200px auto;
+  @media (max-width: $phone) {
+    grid-gap: 90px;
+  }
+
+  .categorie {
+    .cat-image {
+      img {
+        width: 100%;
+        height: 400px;
+      }
+      .cat-name {
+        margin: 12px 0px;
+        a {
+          color: $mainColor;
+          font-weight: bolder;
+          font-size: 22px;
+          text-decoration: none;
+          border-bottom: 3px $mainColor solid;
+        }
+      }
+      .cat-desc {
+        @extend %mainP;
+      }
+    }
+  }
+}
+///MY STRORY STYLE
+.my-story {
+  width: 90%;
+  margin: 100px auto;
+  .content-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+    .right-content {
+      width: 40%;
+      @media (max-width: $tablet) {
+        width: 100%;
+        order: 1;
+        margin-bottom: 30px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .left-content {
+      width: 50%;
+      @media (max-width: $tablet) {
+        width: 100%;
+        order: 2;
+      }
+      .title {
+        @extend %headColor;
+        font-size: 30px;
+      }
+      p {
+        @extend %mainP;
+        margin: 9px 0px;
+      }
+      button {
+        @extend %mainBtn;
+      }
+    }
+  }
+}
