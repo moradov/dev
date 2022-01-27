@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import "./style/app.scss";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Home from "./components/pages/Home";
 import Design from "./components/pages/Design";
 import FrontEnd from "./components/pages/FrontEnd";
@@ -13,14 +13,14 @@ function App() {
   return (
     <div className="app">
       <Suspense fallback={<Spinner />}>
-        <HashRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/design" element={<Design />} />
             <Route path="/front" element={<FrontEnd />} />
             <Route path="/blogs" element={<Blogs />} />
           </Routes>
-        </HashRouter>
+        </BrowserRouter>
         <ScrollTop />
       </Suspense>
     </div>
