@@ -25,7 +25,7 @@ const CategoriesList = () => {
             alt=""
           />
           <div className="cat-name">
-            <NavLink to="/design">Front end</NavLink>
+            <NavLink to="/front">Front end</NavLink>
           </div>
           <div className="cat-desc">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde dicta
