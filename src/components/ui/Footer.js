@@ -20,7 +20,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="footer-left">
-          <p>&copy; 2021 Morad Elazyzy</p>
+          <p>&copy; 2022 Morad Elazyzy</p>
         </div>
       </div>
     </footer>
