@@ -14,7 +14,16 @@ const useGet = (projectType) => {
         .then((res) => {
           setLoading(false);
           if (res.docs.length > 0) {
-            setData(res.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+            const data = res.docs.map((doc) => ({
+              ...doc.data(),
+              id: doc.id,
+            }));
+            /// sorting data before adding it to the state
+            const sortedData = data.sort(function (a, b) {
+              return a.sort - b.sort;
+            });
+            //add the sorted data to the state
+            setData(sortedData);
             return;
           }
           //eslint-disable-next-line
