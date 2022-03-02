@@ -1,5 +1,5 @@
 import React from "react";
-const Header = () => {
+const Header = ({ scrollToCategories }) => {
   return (
     <header>
       <div className="header-content">
@@ -11,7 +11,9 @@ const Header = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dolor
             assumenda ducimus! Lorem ipsum dolor sit
           </p>
-          <button className="main-btn">View work </button>
+          <button className="main-btn" onClick={scrollToCategories}>
+            View work
+          </button>
         </div>
       </div>
     </header>
