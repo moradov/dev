@@ -48,6 +48,7 @@ header {
     button {
       @extend %mainBtn;
       margin-top: 19px;
+      cursor: pointer;
     }
   }
 }
